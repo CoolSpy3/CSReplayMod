@@ -9,7 +9,7 @@ import net.hypixel.api.reply.StatusReply;
 @Mod(id = "replaymod", name = "CSReplayMod",
         description = "Provides the ability to easily replay game types", version = "2.0.0",
         dependencies = {"csmodloader:[1,2)", "cspackets:[1,2)", "csutils:[1,2)",
-                "cshypixelapi:[1.1,2)"})
+                "cshypixelapi:[2,3)"})
 public class CSReplayMod implements Entrypoint
 {
 
