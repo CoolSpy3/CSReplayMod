@@ -4,8 +4,6 @@ import com.coolspy3.csmodloader.mod.Entrypoint;
 import com.coolspy3.csmodloader.mod.Mod;
 import com.coolspy3.csmodloader.network.PacketHandler;
 
-import net.hypixel.api.data.type.GameType;
-import net.hypixel.api.data.type.ServerType;
 import net.hypixel.api.reply.StatusReply;
 
 @Mod(id = "replaymod", name = "CSReplayMod",
@@ -37,12 +35,7 @@ public class CSReplayMod implements Entrypoint
     public static String gameCode(StatusReply.Session session)
     {
         return filterSkywars(filterSkyblock(
-                getGameDBName(session.getServerType()) + "_" + session.getMode().toLowerCase()));
-    }
-
-    public static String getGameDBName(ServerType serverType)
-    {
-        return serverType instanceof GameType ? ((GameType) serverType).getDbName() : "null";
+                session.getGameType().getDbName() + "_" + session.getMode().toLowerCase()));
     }
 
 }
