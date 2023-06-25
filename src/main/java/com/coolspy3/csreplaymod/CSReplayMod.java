@@ -8,9 +8,9 @@ import com.coolspy3.cspackets.packets.ClientChatSendPacket;
 import net.hypixel.api.reply.StatusReply;
 
 @Mod(id = "replaymod", name = "CSReplayMod",
-        description = "Provides the ability to easily replay game types", version = "2.0.4",
+        description = "Provides the ability to easily replay game types", version = "2.0.5",
         dependencies = {"csmodloader:[1.3.1,2)", "cspackets:[1.2.1,2)", "csutils:[1.1.1,2)",
-                "cshypixelapi:[2.1.1,3)"})
+                "cshypixelapi:[3,4)"})
 public class CSReplayMod implements Entrypoint
 {
 

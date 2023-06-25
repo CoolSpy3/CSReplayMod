@@ -10,8 +10,8 @@ import com.coolspy3.hypixelapi.APIConfig;
 import com.coolspy3.util.ModUtil;
 
 import net.hypixel.api.HypixelAPI;
+import net.hypixel.api.data.type.GameType;
 import net.hypixel.api.reply.StatusReply;
-import net.hypixel.api.util.GameType;
 
 public abstract class GameCommand
 {
@@ -29,7 +29,7 @@ public abstract class GameCommand
 
                 StatusReply reply = api.getStatus(GameArgs.get().uuid).join();
                 StatusReply.Session session = reply.getSession();
-                if (session.getGameType() != GameType.SKYBLOCK)
+                if (session.getServerType() != GameType.SKYBLOCK)
                 {
                     if (session.getMap() == null || session.getMode() == null
                             || session.getMode().toLowerCase().equals("lobby"))
